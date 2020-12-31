@@ -3,17 +3,20 @@ import React, {Component} from 'react'
 import styled from "styled-components";
 
 const FooterBlock = styled.div `
-    background-color: #328666;
-    height: 241px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    padding: 0 250px;
-`
+  width: 100%;
+  margin: 0 auto;
 
+  background-color: #328666;
+  height: 15vh;
+  align-items: center;
+  display: flex;
+`
+const Block = styled.div `
+  width: 1140px;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+`
 const ContactUsEmail = styled.div `
   color: #000000;
   font-family: Roboto, sans-serif;
@@ -84,12 +87,14 @@ export default class AppFooter extends Component {
 
         return (
             <FooterBlock>
-                <ContactUsEmail>
-                    Contact us: alexandra.zhigiliy@gmail.com@gmail.com
-                </ContactUsEmail>
-                <LinkIcons>
-                    {elements}
-                </LinkIcons>
+                <Block>
+                    <ContactUsEmail>
+                        Contact us: alexandra.zhigiliy@gmail.com@gmail.com
+                    </ContactUsEmail>
+                    <LinkIcons>
+                        {elements}
+                    </LinkIcons>
+                </Block>
             </FooterBlock>
         )
     }

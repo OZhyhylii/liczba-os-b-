@@ -10,6 +10,9 @@ const AppBlock = styled.div`
   margin: 0 auto;
   max-width: 800px;
 `
+const Block = styled.div `
+height: 85vh;
+`
 
 export default class App extends Component {
     constructor(props) {
@@ -28,12 +31,13 @@ export default class App extends Component {
         const {data} = this.state
         return (
             <>
-
-                <AppBlock>
+                <Block>
                     <AppHeader/>
-                    <PostList
-                       posts={data}/>
-                </AppBlock>
+                    <AppBlock>
+                        <PostList
+                           posts={data}/>
+                    </AppBlock>
+                </Block>
                 <AppFooter/>
             </>
         );

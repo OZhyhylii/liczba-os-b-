@@ -5,9 +5,11 @@ import "../app-header/app-header.css"
 import styled from "styled-components";
 
 const Header = styled.div`
-  position: relative;
-  right: 300px;
-  margin-top: 50px;
+  width: 1140px;
+  margin: 0 auto;
+  svg {
+    margin-top: 50px;
+  }
 `
 
 const AppHeader = () => {
