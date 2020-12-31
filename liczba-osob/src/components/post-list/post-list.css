@@ -1,11 +1,7 @@
 .app-list {
     margin-top: 0;
 }
-.title {
-    margin-top: 110px;
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
+
 
 .list-group-item {
     display: flex;

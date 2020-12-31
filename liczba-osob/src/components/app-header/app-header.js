@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const Header = styled.div`
   position: relative;
-  right: 200px;
+  right: 300px;
   margin-top: 50px;
 `
 

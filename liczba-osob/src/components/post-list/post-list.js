@@ -1,8 +1,20 @@
 import React from 'react';
 
 import './post-list.css'
-import {Badge} from "reactstrap";
 import styled from "styled-components";
+
+
+const TitleBus = styled.div `
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  color: #003521;
+  
+  margin-top: 110px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+`
 
 const Item = styled.div`
   
@@ -20,13 +32,13 @@ const PostList = ({posts}) => {
             const {id, busName, time, linia, stancia, concova, maxMest, nowMest} = item;
             return (
                 <div key={id}>
-                    <h4><Badge color="secondary title">Autobus: {busName}</Badge></h4>
+                    <TitleBus color="secondary title">Autobus: {busName}</TitleBus>
                     <div  className='list-group-item'>
                         <Item>Czas:<br/>{time}</Item>
                         <Item>Linia:<br/>{linia}</Item>
                         <Item>Przystanek końcowy:<br/>{stancia}</Item>
                         <Item>Przystanek aktualny:<br/>{concova}</Item>
-                        <Item>Miejsca:<br/>{maxMest}/{nowMest}</Item>
+                        <Item>Miejsca:<br/>{nowMest}/{maxMest}</Item>
                     </div>
                 </div>
             )
