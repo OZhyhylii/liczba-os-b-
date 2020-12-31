@@ -1,25 +1,40 @@
-import logo from '../../logo.svg';
+import React, {Component} from 'react'
+import AppHeader from "../app-header/app-header";
+import PostList from "../post-list";
 import './app.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import styled from "styled-components";
+
+const AppBlock = styled.div`
+  margin: 0 auto;
+  max-width: 800px;
+`
+
+export default class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data : [
+                {busName:"55M", time:"16:15", linia:10, stancia: "Lorem Ipsum", concova: "Lorem Ipsum", maxMest: 39, nowMest:17,  id: "fsfdsfsd"}
+            ]
+        }
+    }
+
+
+    render() {
+
+        const {data} = this.state
+        return (
+            <>
+
+                <AppBlock>
+                    <AppHeader/>
+                    <PostList
+                       posts={data}/>
+                </AppBlock>
+            </>
+        );
+    }
 }
 
-export default App;
+

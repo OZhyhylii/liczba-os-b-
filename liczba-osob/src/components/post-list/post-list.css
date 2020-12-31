@@ -1,0 +1,20 @@
+.app-list {
+    margin-top: 0;
+}
+.title {
+    margin-top: 110px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    width: 850px;
+    padding: 12px 60px;
+    background: #C9FFEC;
+    border: 1px solid #01995F;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
