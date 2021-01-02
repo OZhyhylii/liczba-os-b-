@@ -6,7 +6,7 @@ const FooterBlock = styled.div `
   width: 100%;
   margin: 0 auto;
 
-  background-color: #328666;
+  background-color: #292C36;
   height: 15vh;
   align-items: center;
   display: flex;
@@ -18,7 +18,7 @@ const Block = styled.div `
   display: flex;
 `
 const ContactUsEmail = styled.div `
-  color: #000000;
+  color: #A7A7A7;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: bold;

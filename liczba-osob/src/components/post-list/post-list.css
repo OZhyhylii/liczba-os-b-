@@ -3,14 +3,19 @@
 }
 
 
-.list-group-item {
+.list{
     display: flex;
     justify-content: space-between;
     width: 850px;
+    height: 73px;
     padding: 12px 60px;
-    background: #C9FFEC;
-    border: 1px solid #01995F;
+    background: #EEEEEE;
+    border: 1px solid #292C36;
     box-sizing: border-box;
     border-radius: 5px;
+    transition: 1s;
 }
 
+.list:hover {
+    background: #DBDBDB
+}

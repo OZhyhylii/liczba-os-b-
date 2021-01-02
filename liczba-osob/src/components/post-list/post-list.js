@@ -5,46 +5,56 @@ import styled from "styled-components";
 
 
 const TitleBus = styled.div `
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  color: #003521;
   
   margin-top: 110px;
   margin-left: 20px;
   margin-bottom: 15px;
+  
+ 
+
+  h1 {
+
+    color: #000000;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+
+    transition: 0.5s;
+    
+    :hover {
+      color: darkcyan;
+    }
 `
 
 const Item = styled.div`
-  
-  color: #003521;
+  color: #000000;
   font-size: 18px;
   font-weight: 500;
   font-family: Roboto, sans-serif;
 `
 
-const PostList = ({posts}) => {
-
-    const elements = posts.map( (item) => {
-        // Простой способ проверки на объект + содержится ли в нем информация
+const PostList = ({peopleInfo, bus, line}) => {
+    const elements = peopleInfo.map( (item) => {
         if ( typeof item === 'object' && isEmpty(item) ){
-            const {id, busName, time, linia, stancia, concova, maxMest, nowMest} = item;
+            const {id, maxSeats, nowSeats, time} = item;
+            const lines = Object.keys(line),
+                  lineNumber = 0, // choose line
+                  lineInfo = line[lines[lineNumber]];
             return (
                 <div key={id}>
-                    <TitleBus color="secondary title">Autobus: {busName}</TitleBus>
-                    <div  className='list-group-item'>
-                        <Item>Czas:<br/>{time}</Item>
-                        <Item>Linia:<br/>{linia}</Item>
-                        <Item>Przystanek końcowy:<br/>{stancia}</Item>
-                        <Item>Przystanek aktualny:<br/>{concova}</Item>
-                        <Item>Miejsca:<br/>{nowMest}/{maxMest}</Item>
+                    <TitleBus color="secondary title"><h1>Autobus: {bus}</h1></TitleBus>
+                    <div  className='list'>
+                        <Item>Czas:<br/>{`${time}`}</Item>
+                        <Item>Linia:<br/>{lines[lineNumber]}</Item>
+                        <Item>Przystanek aktualny:<br/>{lineInfo[peopleInfo.length-1]}</Item>
+                        <Item>Przystanek końcowy:<br/>{lineInfo[lineInfo.length-1]}</Item>
+                        <Item>Miejsca:<br/>{nowSeats}/{maxSeats}</Item>
                     </div>
                 </div>
             )
         }
     })
-
     function isEmpty(obj) {
         for(let key in obj)
         {
@@ -55,7 +65,7 @@ const PostList = ({posts}) => {
 
     return (
         <div className="app-list list-group">
-            {elements}
+            {elements[elements.length-1]}
         </div>
     )
 }

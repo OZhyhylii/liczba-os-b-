@@ -6,6 +6,7 @@ import './app.css';
 
 import styled from "styled-components";
 
+
 const AppBlock = styled.div`
   margin: 0 auto;
   max-width: 800px;
@@ -19,23 +20,45 @@ export default class App extends Component {
         super(props);
         this.state = {
             data : [
-                {busName:"55M", time:"17:15", linia:12, stancia: "Lorem Ipsum", concova: "Lorem Ipsum", maxMest: 39, nowMest:17,  id: "fsfdsfsd"},
+                {   time: `${12}:${12}`,
+                    nowSeats:17,
+                    maxSeats: 39,
+                    id: "fsfdsfsd"}
 
-            ]
+            ],
+                line : {
+                    12 :["lofghjfgrem", "kavhfgo", "chego", "sho", "zachem", "kak"]
+            },
+            busName:"55M"
+         }
+    }
+    isEmpty = (obj) => {
+        for(let key in obj)
+        {
+            return true;
         }
+        return false;
     }
 
-
     render() {
+        const {data, line, busName} = this.state
 
-        const {data} = this.state
+        const elements = data.map( (item) => {
+            if ( typeof item === 'object' && this.isEmpty(item) ) {
+                return item;
+                }
+            }
+        )
+
         return (
             <>
                 <Block>
                     <AppHeader/>
                     <AppBlock>
                         <PostList
-                           posts={data}/>
+                           peopleInfo={elements}
+                           bus={ busName}
+                           line={line}/>
                     </AppBlock>
                 </Block>
                 <AppFooter/>
