@@ -34,7 +34,7 @@ const Item = styled.div`
   font-family: Roboto, sans-serif;
 `
 
-const PostList = ({peopleInfo, bus, line}) => {
+const PostList = ({peopleInfo, line}) => {
     const elements = peopleInfo.map( (item) => {
         if ( typeof item === 'object' && isEmpty(item) ){
             const {id, maxSeats, nowSeats, time} = item;
@@ -43,7 +43,7 @@ const PostList = ({peopleInfo, bus, line}) => {
                   lineInfo = line[lines[lineNumber]];
             return (
                 <div key={id}>
-                    <TitleBus color="secondary title"><h1>Autobus: {bus}</h1></TitleBus>
+                    <TitleBus color="secondary title"><h1>Autobus</h1></TitleBus>
                     <div  className='list'>
                         <Item>Czas:<br/>{`${time}`}</Item>
                         <Item>Linia:<br/>{lines[lineNumber]}</Item>

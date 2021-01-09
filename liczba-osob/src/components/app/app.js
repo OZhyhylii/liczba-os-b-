@@ -28,8 +28,7 @@ export default class App extends Component {
             ],
                 line : {
                     12 :["lofghjfgrem", "kavhfgo", "chego", "sho", "zachem", "kak"]
-            },
-            busName:"55M"
+            }
          }
     }
     isEmpty = (obj) => {
@@ -41,7 +40,7 @@ export default class App extends Component {
     }
 
     render() {
-        const {data, line, busName} = this.state
+        const {data, line} = this.state
 
         const elements = data.map( (item) => {
             if ( typeof item === 'object' && this.isEmpty(item) ) {
@@ -57,7 +56,6 @@ export default class App extends Component {
                     <AppBlock>
                         <PostList
                            peopleInfo={elements}
-                           bus={ busName}
                            line={line}/>
                     </AppBlock>
                 </Block>
