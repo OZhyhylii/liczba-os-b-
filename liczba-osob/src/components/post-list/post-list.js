@@ -32,6 +32,8 @@ const Item = styled.div`
   font-size: 18px;
   font-weight: 500;
   font-family: Roboto, sans-serif;
+  text-align: center;
+  
 `
 
 const PostList = ({peopleInfo, line}) => {

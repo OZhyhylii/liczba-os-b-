@@ -1,0 +1,1 @@
+const url = 'mongodb+srv://<LyxF3>:<dmitry_2002>@cluster0.buuts.mongodb.net/<liczba osob>?retryWrites=true&w=majority'

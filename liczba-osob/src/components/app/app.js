@@ -27,7 +27,7 @@ export default class App extends Component {
 
             ],
                 line : {
-                    12 :["lofghjfgrem", "kavhfgo", "chego", "sho", "zachem", "kak"]
+                    12 :["first", "second", "third", "fourth", "fifth"]
             }
          }
     }
