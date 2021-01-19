@@ -22,13 +22,14 @@ export default class App extends Component {
             data : [
                 {   time: `${12}:${12}`,
                     nowSeats:17,
-                    maxSeats: 39,
                     id: "fsfdsfsd"}
 
             ],
-                line : {
-                    12 :["first", "second", "third", "fourth", "fifth"]
-            }
+            lineNum: 101,
+            bus : {
+                    "55M" :["first", "second", "third", "fourth", "fifth"]
+            },
+            maxSeats: 39,
          }
     }
     isEmpty = (obj) => {
@@ -40,7 +41,7 @@ export default class App extends Component {
     }
 
     render() {
-        const {data, line} = this.state
+        const {data, bus, lineNum, maxSeats} = this.state
 
         const elements = data.map( (item) => {
             if ( typeof item === 'object' && this.isEmpty(item) ) {
@@ -56,7 +57,9 @@ export default class App extends Component {
                     <AppBlock>
                         <PostList
                            peopleInfo={elements}
-                           line={line}/>
+                           bus={bus}
+                            line={lineNum}
+                            max={maxSeats}/>
                     </AppBlock>
                 </Block>
                 <AppFooter/>

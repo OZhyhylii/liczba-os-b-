@@ -36,26 +36,30 @@ const Item = styled.div`
   
 `
 
-const PostList = ({peopleInfo, line}) => {
+const PostList = ({peopleInfo, bus, line, max}) => {
     const elements = peopleInfo.map( (item) => {
         if ( typeof item === 'object' && isEmpty(item) ){
-            const {id, maxSeats, nowSeats, time} = item;
-            const lines = Object.keys(line),
-                  lineNumber = 0, // choose line
-                  lineInfo = line[lines[lineNumber]];
+            const {id, nowSeats, time} = item;
+            const buses = Object.keys(bus),
+                  busNumber = 0, // choose bus
+                  busStation = bus[buses[busNumber]];
             return (
                 <div key={id}>
-                    <TitleBus color="secondary title"><h1>Autobus</h1></TitleBus>
+                    <TitleBus color="secondary title"><h1>Autobus: {buses[busNumber]}</h1></TitleBus>
                     <div  className='list'>
                         <Item>Czas:<br/>{`${time}`}</Item>
-                        <Item>Linia:<br/>{lines[lineNumber]}</Item>
-                        <Item>Przystanek aktualny:<br/>{lineInfo[peopleInfo.length-1]}</Item>
-                        <Item>Przystanek końcowy:<br/>{lineInfo[lineInfo.length-1]}</Item>
-                        <Item>Miejsca:<br/>{nowSeats}/{maxSeats}</Item>
+                        <Item>Linia:<br/>{line}</Item>
+                        <Item>Przystanek Poprzedni:<br/>{busStation[(peopleInfo.length%busStation.length)-1]}</Item>
+                        <Item>Przystanek Końcowy:<br/>{busStation[busStation.length-1]}</Item>
+                        <Item>Miejsca:<br/>{nowSeats}/{max}</Item>
                     </div>
                 </div>
             )
         }
+        return (
+            <div>
+            </div>
+        )
     })
     function isEmpty(obj) {
         for(let key in obj)

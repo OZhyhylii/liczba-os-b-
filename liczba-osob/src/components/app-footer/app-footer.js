@@ -45,7 +45,7 @@ const AppFooter = () => {
                 </ContactUsEmail>
                 <LinkIcons>
                     <Item>
-                        <a href="#">
+                        <a href="https://www.google.com.ua/?hl=ru">
                             <svg enableBackground="new 0 0 24 24" height="40" viewBox="0 0 24 24" width="40"
                                  xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                                 <linearGradient id="SVGID_1_" gradientTransform="matrix(0 -1.982 -1.844 0 -132.522 -51.077)"
@@ -66,7 +66,7 @@ const AppFooter = () => {
                     </Item>
 
                     <Item>
-                        <a href="#">
+                        <a href="https://www.google.com.ua/?hl=ru">
                             <svg enableBackground="new 0 0 24 24" height="40" viewBox="0 0 24 24" width="40"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <g fill="#5c6bc0">
@@ -82,7 +82,7 @@ const AppFooter = () => {
                     </Item>
 
                     <Item>
-                        <a href="#">
+                        <a href="https://www.google.com.ua/?hl=ru">
                             <svg enableBackground="new 0 0 24 24" height="40" viewBox="0 0 24 24" width="40"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="12" cy="12" fill="#039be5" r="12"/>
@@ -94,7 +94,7 @@ const AppFooter = () => {
                     </Item>
 
                     <Item>
-                        <a href="#">
+                        <a href="https://www.google.com.ua/?hl=ru">
                             <svg
                                 enableBackground="new 0 0 24 24"
                                 height="40"
