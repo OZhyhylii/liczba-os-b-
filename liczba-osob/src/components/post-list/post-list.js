@@ -49,7 +49,7 @@ const PostList = ({peopleInfo, bus, line, max}) => {
                         <Item>Linia:<br/>{line}</Item>
                         <Item>Przystanek Poprzedni:<br/>{busStation[(peopleInfo.length%busStation.length)-1]}</Item>
                         <Item>Przystanek Końcowy:<br/>{busStation[busStation.length-1]}</Item>
-                        <Item>Miejsca:<br/>{people}/{max}</Item>
+                        <Item>Zajęte miejsca:<br/>{people}/{max}</Item>
                     </div>
                 </div>
             )
