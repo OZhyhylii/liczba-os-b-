@@ -23,7 +23,7 @@ export default class App extends Component {
             data : [],
             lineNum: 101,
             bus : {
-                "555-1423432" :["ааіваві", "sаівавіаecond", "thirаівпмвапавпавіd", "fouавіаіrth", "fifаіваівth"]
+                "555-1423432" :["first", "second", "third", "fourth", "fifth"]
             },
             maxSeats: 39,
         }
@@ -35,7 +35,7 @@ export default class App extends Component {
             const data = []
                 data.push({
                     people:response.data["People"],
-                    // date: response.data["Czas"]
+                    date: response.data["Time"]
                 })
             this.setState({
                 data

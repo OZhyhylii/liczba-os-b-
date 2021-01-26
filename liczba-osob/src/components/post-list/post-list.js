@@ -37,20 +37,15 @@ const Item = styled.div`
 const PostList = ({peopleInfo, bus, line, max}) => {
     const elements = peopleInfo.map( (item) => {
         if ( typeof item === 'object' && isEmpty(item) ){
-            const {id, people} = item;
+            const {people, date} = item;
             const buses = Object.keys(bus),
                 busNumber = 0, // choose bus
-                busStation = bus[buses[busNumber]],
-                date = new Date()
-            let hours = date.getHours(),
-                minutes = date.getMinutes()
-            // Если будет время в ДБ, то Delete line 44-47, В 40 line добавить (, date)
-            // И в 53 заменить ( ${hours}:${minutes} ) на ( ${date} )
+                busStation = bus[buses[busNumber]]
             return (
-                <div key={id}>
+                <div key={date}>
                     <TitleBus color="secondary title"><h1>Autobus: {buses[busNumber]}</h1></TitleBus>
                     <div  className='list'>
-                        <Item>Czas:<br/>{`${hours}:${minutes}`}</Item>
+                        <Item>Czas:<br/>{`${date}`}</Item>
                         <Item>Linia:<br/>{line}</Item>
                         <Item>Przystanek Poprzedni:<br/>{busStation[(peopleInfo.length%busStation.length)-1]}</Item>
                         <Item>Przystanek Końcowy:<br/>{busStation[busStation.length-1]}</Item>
