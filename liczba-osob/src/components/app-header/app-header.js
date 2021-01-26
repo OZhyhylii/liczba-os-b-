@@ -1,15 +1,13 @@
 import React from 'react'
 
-import "../app-header/app-header.css"
 
 import styled from "styled-components";
 
 const Header = styled.div`
-  width: 1140px;
+ 
+  padding-left: 116px;
+  padding-top: 93px;
   margin: 0 auto;
-  svg {
-    margin-top: 50px;
-  }
 `
 
 const AppHeader = () => {

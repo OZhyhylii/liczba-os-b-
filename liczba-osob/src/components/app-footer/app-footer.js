@@ -6,20 +6,20 @@ const FooterBlock = styled.div `
   width: 100%;
   margin: 0 auto;
 
-  background-color: #292C36;
-  height: 15vh;
+  background-color: #495464;
+  height: 17vh;
   align-items: center;
   display: flex;
 `
 const Block = styled.div `
-  width: 1140px;
+  width: 1432px;
   margin: 0 auto;
   justify-content: space-between;
   display: flex;
 `
 const ContactUsEmail = styled.div `
   color: #A7A7A7;
-  font-family: Roboto, sans-serif;
+
   font-size: 20px;
   font-weight: bold;
 `
@@ -27,8 +27,8 @@ const ContactUsEmail = styled.div `
 const LinkIcons = styled.div `
   display: flex;
   justify-content: space-between;
-  width: 240px;
- height: 40px;
+  width: 263px;
+  height: 40px;
 `
 const Item = styled.div `
 margin: 0;
